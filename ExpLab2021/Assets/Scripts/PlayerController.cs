@@ -19,9 +19,9 @@ public class PlayerController : MonoBehaviour
 	  Control = true;
 	}
 
+
 	void Update()
 	{
-
     // Movement key
     	if(Control == true)
 		{
@@ -73,5 +73,26 @@ public class PlayerController : MonoBehaviour
 				}	   			
 			}      	      		
 		}
-    }
+
+
+		//Ingnora Collisioni
+		GameObject[] BlackObjects = GameObject.FindGameObjectsWithTag("BlackTerrain");
+		GameObject[] WhiteObjects = GameObject.FindGameObjectsWithTag("WhiteTerrain");
+
+		if(Yin == true && Yang == false)
+		{
+			foreach (GameObject obj in BlackObjects) 
+			{
+				Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
+			}
+		}
+
+		if(Yin == false && Yang == true)
+		{
+			foreach (GameObject obj in WhiteObjects) 
+			{
+				Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
+			}
+		}
+	}
 }
