@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Repulsive : MonoBehaviour
 {  
-    public bool BlackTerrain;
-    public bool WhiteTerrain;
-
     public float RepulsiveForce;
 
     void Start()

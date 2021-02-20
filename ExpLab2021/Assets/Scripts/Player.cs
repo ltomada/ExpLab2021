@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class Player : MonoBehaviour
 {
 	[Header("Yin or Yang")]
 	public bool Yin;
