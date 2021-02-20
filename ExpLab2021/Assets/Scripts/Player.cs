@@ -14,32 +14,18 @@ public class Player : MonoBehaviour
 	public Rigidbody2D rb;
 	public bool Control = true;
 
+	[Header("Positive/Negative settings")]
+	public Material Black;
+	public Material White;
+	public GameObject BlackPrefab;
+	public GameObject WhitePrefab;
+
 	void Start()
 	{
 	  	Control = true;
-		  
-	  	//Ingnora Collisioni
-		GameObject[] BlackObjects = GameObject.FindGameObjectsWithTag("BlackTerrain");
-		GameObject[] WhiteObjects = GameObject.FindGameObjectsWithTag("WhiteTerrain");
-
-		if(Yin == true && Yang == false)
-		{
-			foreach (GameObject obj in BlackObjects) 
-			{
-				Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
-			}
-		}
-
-		if(Yin == false && Yang == true)
-		{
-			foreach (GameObject obj in WhiteObjects) 
-			{
-				Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
-			}
-		}
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
     // Movement key
     	if(Control == true)
@@ -95,8 +81,8 @@ public class Player : MonoBehaviour
 
 
 		//Ingnora Collisioni
-		GameObject[] BlackObjects = GameObject.FindGameObjectsWithTag("BlackTerrain");
-		GameObject[] WhiteObjects = GameObject.FindGameObjectsWithTag("WhiteTerrain");
+		GameObject[]  BlackObjects = GameObject.FindGameObjectsWithTag("BlackTerrain");
+		GameObject[]  WhiteObjects = GameObject.FindGameObjectsWithTag("WhiteTerrain");
 
 		if(Yin == true && Yang == false)
 		{
@@ -112,6 +98,20 @@ public class Player : MonoBehaviour
 			{
 				Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
 			}
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if(other.gameObject.tag == "BlackTerrain")
+		{
+			Instantiate(WhitePrefab, other.transform.position, Quaternion.identity);
+			Destroy(other.gameObject);	
+		}
+		else if(other.gameObject.tag == "WhiteTerrain")
+		{
+			Instantiate(BlackPrefab, other.transform.position, Quaternion.identity);
+			Destroy(other.gameObject);	
 		}
 	}
 }
