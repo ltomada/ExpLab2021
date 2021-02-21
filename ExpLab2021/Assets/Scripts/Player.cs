@@ -20,6 +20,10 @@ public class Player : MonoBehaviour
 	public GameObject BlackPrefab;
 	public GameObject WhitePrefab;
 
+	[Header("AudioClip")]
+	public AudioSource Source;
+	public AudioClip Collision;
+
 	void Start()
 	{
 	  	Control = true;
@@ -107,11 +111,13 @@ public class Player : MonoBehaviour
 		{
 			Instantiate(WhitePrefab, other.transform.position, Quaternion.identity);
 			Destroy(other.gameObject);	
+			Source.PlayOneShot(Collision, 0.7F);
 		}
 		else if(other.gameObject.tag == "WhiteTerrain")
 		{
 			Instantiate(BlackPrefab, other.transform.position, Quaternion.identity);
 			Destroy(other.gameObject);	
+			Source.PlayOneShot(Collision, 0.7F);
 		}
 	}
 }
