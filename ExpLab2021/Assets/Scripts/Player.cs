@@ -14,12 +14,6 @@ public class Player : MonoBehaviour
 	public Rigidbody2D rb;
 	public bool Control = true;
 
-	[Header("Positive/Negative settings")]
-	public Material Black;
-	public Material White;
-	public GameObject BlackPrefab;
-	public GameObject WhitePrefab;
-
 	[Header("AudioClip")]
 	public AudioSource Source;
 	public AudioClip Collision;
@@ -107,17 +101,6 @@ public class Player : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if(other.gameObject.tag == "BlackTerrain")
-		{
-			Instantiate(WhitePrefab, other.transform.position, Quaternion.identity);
-			Destroy(other.gameObject);	
-			Source.PlayOneShot(Collision, 0.7F);
-		}
-		else if(other.gameObject.tag == "WhiteTerrain")
-		{
-			Instantiate(BlackPrefab, other.transform.position, Quaternion.identity);
-			Destroy(other.gameObject);	
-			Source.PlayOneShot(Collision, 0.7F);
-		}
+		Source.PlayOneShot(Collision, 0.1F);
 	}
 }
