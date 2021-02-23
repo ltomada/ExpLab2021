@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WhiteTerrain
   - BlackTerrain
+  - Size
   layers:
   - Default
   - TransparentFX

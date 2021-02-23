@@ -14,9 +14,16 @@ public class Player : MonoBehaviour
 	public Rigidbody2D rb;
 	public bool Control = true;
 
-	[Header("AudioClip")]
+	[Header("Audio Clip")]	
 	public AudioSource Source;
 	public AudioClip Collision;
+
+	[Header("Size Settings")]
+    public Vector2 StandardScale;	
+	public Vector2 SizeScale; 
+	public float SizeSpeed; 
+	public float StandardSpeed; 
+	public bool SizeUp;
 
 	void Start()
 	{
@@ -25,7 +32,7 @@ public class Player : MonoBehaviour
 
 	void FixedUpdate()
 	{
-    // Movement key
+    	//Movement key
     	if(Control == true)
 		{
 			if(Yin == true && Yang == false)
@@ -77,7 +84,6 @@ public class Player : MonoBehaviour
 			}      	      		
 		}
 
-
 		//Ingnora Collisioni
 		GameObject[]  BlackObjects = GameObject.FindGameObjectsWithTag("BlackTerrain");
 		GameObject[]  WhiteObjects = GameObject.FindGameObjectsWithTag("WhiteTerrain");
@@ -97,10 +103,36 @@ public class Player : MonoBehaviour
 				Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
 			}
 		}
+
+		//Change Dimension
+		if(SizeUp == true)
+		{
+			transform.localScale = Vector2.Lerp (transform.localScale, SizeScale, SizeSpeed * Time.deltaTime);
+		}
+		else
+		{
+			StopCoroutine(LerpFunction());
+			transform.localScale = Vector2.Lerp (transform.localScale, StandardScale, StandardSpeed * Time.deltaTime);
+		}
 	}
 
+	public IEnumerator LerpFunction()
+	{
+		SizeUp = true;
+		yield return new WaitForSeconds(5.0f);
+		SizeUp = false;
+	}
+		
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		Source.PlayOneShot(Collision, 0.1F);
+
+		if(other.gameObject.tag == "Size")
+		{
+			if(SizeUp == false)
+			{
+				StartCoroutine(LerpFunction());
+			}
+		}
 	}
 }
