@@ -28,7 +28,8 @@ public class Player : MonoBehaviour
 	[Header("Magnet Settings")]	
 	public float MagnetForce;
 	bool CollisionMagnet;
-	public GameObject MagnetismObj;
+	public GameObject MagnetismSound;
+	public ParticleSystem MagnetismParticle;
 
 	void Start()
 	{
@@ -158,8 +159,6 @@ public class Player : MonoBehaviour
 	{
 		if(other.gameObject.tag == "Magnet" && CollisionMagnet == false)
 		{
-			MagnetismObj.SetActive(true);
-
 			if(Yin == true && Yang == false)
 			{
 				Vector2 direction = transform.position - other.transform.position;
@@ -183,11 +182,21 @@ public class Player : MonoBehaviour
 		}				
 	}
 
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if(other.gameObject.tag == "Magnet")
+		{
+			MagnetismSound.SetActive(true);
+			MagnetismParticle.Play();
+		}
+	}
+
 	void OnTriggerExit2D(Collider2D other)
 	{
 		if(other.gameObject.tag == "Magnet")
 		{
-			MagnetismObj.SetActive(false);
+			MagnetismSound.SetActive(false);
+			MagnetismParticle.Stop();
 		}
 	}
 }

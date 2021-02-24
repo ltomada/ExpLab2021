@@ -2143,7 +2143,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 3.5
   m_LinearDrag: 1
   m_AngularDrag: 1
   m_GravityScale: 0
@@ -2741,7 +2741,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 3.5
   m_LinearDrag: 1
   m_AngularDrag: 1
   m_GravityScale: 0
@@ -2897,10 +2897,6 @@ PrefabInstance:
     - target: {fileID: 3694503292499187654, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: m_Name
       value: Yang
-      objectReference: {fileID: 0}
-    - target: {fileID: 4850010971713637049, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
