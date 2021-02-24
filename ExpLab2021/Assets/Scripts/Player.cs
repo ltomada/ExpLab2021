@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
 	public float StandardSpeed; 
 	public bool SizeUp;
 
+	[Header("Magnet Settings")]	
+	public float MagnetForce;
+
 	void Start()
 	{
 	  	Control = true;
@@ -113,7 +116,7 @@ public class Player : MonoBehaviour
 		{
 			StopCoroutine(LerpFunction());
 			transform.localScale = Vector2.Lerp (transform.localScale, StandardScale, StandardSpeed * Time.deltaTime);
-		}
+		}		
 	}
 
 	public IEnumerator LerpFunction()
@@ -134,5 +137,28 @@ public class Player : MonoBehaviour
 				StartCoroutine(LerpFunction());
 			}
 		}
+	}
+
+	void OnTriggerStay2D(Collider2D other)
+	{
+		if(other.gameObject.tag == "Magnet")
+		{
+			if(Yin == true && Yang == false)
+			{
+				Vector2 direction = transform.position - other.transform.position;
+				float distance = direction.magnitude;
+				direction = direction.normalized;
+				float forceRate = (MagnetForce/ distance);
+				other.GetComponent<Rigidbody2D>().AddForce(direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));
+			}
+			else if(Yin == false && Yang == true)
+			{
+				Vector2 direction = transform.position - other.transform.position;
+				float distance = direction.magnitude;
+				direction = direction.normalized;
+				float forceRate = (MagnetForce/ distance);
+				other.GetComponent<Rigidbody2D>().AddForce(-direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));		
+			}
+		}				
 	}
 }

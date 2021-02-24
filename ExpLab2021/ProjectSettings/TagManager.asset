@@ -7,6 +7,7 @@ TagManager:
   - WhiteTerrain
   - BlackTerrain
   - Size
+  - Magnet
   layers:
   - Default
   - TransparentFX
