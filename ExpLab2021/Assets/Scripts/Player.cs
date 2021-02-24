@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
 
 	[Header("Magnet Settings")]	
 	public float MagnetForce;
+	bool CollisionMagnet;
+	public GameObject MagnetismObj;
 
 	void Start()
 	{
@@ -137,19 +139,36 @@ public class Player : MonoBehaviour
 				StartCoroutine(LerpFunction());
 			}
 		}
+
+		if(other.gameObject.tag == "Magnet")
+		{
+			CollisionMagnet = true;
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D other)
+	{
+		if(other.gameObject.tag == "Magnet")
+		{
+			CollisionMagnet = false;
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D other)
 	{
-		if(other.gameObject.tag == "Magnet")
+		if(other.gameObject.tag == "Magnet" && CollisionMagnet == false)
 		{
+			MagnetismObj.SetActive(true);
+
 			if(Yin == true && Yang == false)
 			{
 				Vector2 direction = transform.position - other.transform.position;
 				float distance = direction.magnitude;
 				direction = direction.normalized;
 				float forceRate = (MagnetForce/ distance);
+				GameObject OtherSObj = other.GetComponent<Magnet>().OtherSideObj;
 				other.GetComponent<Rigidbody2D>().AddForce(direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));
+				OtherSObj.GetComponent<Rigidbody2D>().AddForce(direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));
 			}
 			else if(Yin == false && Yang == true)
 			{
@@ -157,8 +176,18 @@ public class Player : MonoBehaviour
 				float distance = direction.magnitude;
 				direction = direction.normalized;
 				float forceRate = (MagnetForce/ distance);
-				other.GetComponent<Rigidbody2D>().AddForce(-direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));		
+				GameObject OtherSObj = other.GetComponent<Magnet>().OtherSideObj;
+				other.GetComponent<Rigidbody2D>().AddForce(-direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));
+				OtherSObj.GetComponent<Rigidbody2D>().AddForce(-direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));		
 			}
 		}				
+	}
+
+	void OnTriggerExit2D(Collider2D other)
+	{
+		if(other.gameObject.tag == "Magnet")
+		{
+			MagnetismObj.SetActive(false);
+		}
 	}
 }

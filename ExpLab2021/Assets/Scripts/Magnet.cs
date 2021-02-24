@@ -10,13 +10,12 @@ public class Magnet : MonoBehaviour
 
     void Start()
     {
-
+		
     }
 
     void FixedUpdate()
     {
         //Follow movement
-        //transform.Translate(OtherSideObj.transform.position * Time.deltaTime);
 
         //Ingnora Collisioni Terreno
 		GameObject[]  BlackObjects = GameObject.FindGameObjectsWithTag("BlackTerrain");
