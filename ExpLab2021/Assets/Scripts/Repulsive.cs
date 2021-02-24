@@ -18,7 +18,7 @@ public class Repulsive : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-      if(other.gameObject.tag == "Player")
+      if(other.gameObject.tag == "Yin" && other.gameObject.tag == "Yang")
       {
         other.rigidbody.AddForce(-other.contacts[0].normal * RepulsiveForce, ForceMode2D.Impulse);     
       }

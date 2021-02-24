@@ -8,6 +8,8 @@ TagManager:
   - BlackTerrain
   - Size
   - Magnet
+  - Yin
+  - Yang
   layers:
   - Default
   - TransparentFX

@@ -30,6 +30,11 @@ public class Player : MonoBehaviour
 	bool CollisionMagnet;
 	public GameObject MagnetismSound;
 	public ParticleSystem MagnetismParticle;
+	
+	[Header("Union Settings")]
+	public GameObject Taijitu;	
+	public Transform YinPoint;
+	public Transform YangPoint;
 
 	void Start()
 	{
@@ -64,8 +69,7 @@ public class Player : MonoBehaviour
 		 	  	rb.AddForce(new Vector2 (0f,-Speed));
 				}	   			
 			}
-
-			if(Yin == false && Yang == true)
+			else if(Yin == false && Yang == true)
 			{
 				if(Input.GetKey(KeyCode.RightArrow))
 	   			{
@@ -88,6 +92,24 @@ public class Player : MonoBehaviour
 		 	  	rb.AddForce(new Vector2 (0f,-Speed));
 				}	   			
 			}      	      		
+		}
+
+		if((GameObject.Find("Taijitu").GetComponent<CheckPlayer>().YinOnTrigger == true) && (GameObject.Find("Taijitu").GetComponent<CheckPlayer>().YangOnTrigger == true))
+		{
+			if(Yin == true && Yang == false)
+			{
+				transform.GetComponent<CircleCollider2D>().enabled = false;
+				Control = false;
+				transform.position = Vector3.Lerp(transform.position, YinPoint.transform.position, Time.deltaTime);
+				StartCoroutine(Union());
+			}
+			else if(Yang == true && Yin == false)
+			{
+				transform.GetComponent<CircleCollider2D>().enabled = false;
+				Control = false;
+				transform.position = Vector3.Lerp(transform. position, YangPoint.transform.position, Time.deltaTime);
+				StartCoroutine(Union());
+			}
 		}
 
 		//Ingnora Collisioni
@@ -127,6 +149,15 @@ public class Player : MonoBehaviour
 		SizeUp = true;
 		yield return new WaitForSeconds(5.0f);
 		SizeUp = false;
+	}
+
+	public IEnumerator Union()
+	{
+		yield return new WaitForSeconds(2.5f);
+		this.gameObject.transform.SetParent(Taijitu.transform, true);
+		Taijitu.GetComponent<Rotate>().enabled = true;
+		yield return new WaitForSeconds(5.0f);
+		GameObject.Find("LevelLoader").GetComponent<LevelLoader>().Fade = true;
 	}
 		
 	void OnCollisionEnter2D(Collision2D other)

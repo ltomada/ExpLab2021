@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: VoronoiCell
   m_Shader: {fileID: 4800000, guid: b7f64162fc45d084f82c0b511f084898, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -101,3 +101,8 @@ Material:
     - _Player3Pos: {r: 0, g: 0, b: 0, a: 0}
     - _Player4Col: {r: 1, g: 1, b: 1, a: 1}
     - _Player4Pos: {r: 0, g: 0, b: 0, a: 0}
+    - _Player5Pos: {r: 1, g: 1, b: 1, a: 0}
+    - _Player6Pos: {r: 1, g: 1, b: 1, a: 0}
+    - _Player7Pos: {r: 1, g: 1, b: 1, a: 0}
+    - _Player8Pos: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []

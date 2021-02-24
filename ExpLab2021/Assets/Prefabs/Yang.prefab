@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3694503292499187648}
   m_Layer: 0
   m_Name: Yang
-  m_TagString: Player
+  m_TagString: Yang
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d442d08bee3d3284eb71ff92e9a9febf, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -169,6 +169,9 @@ MonoBehaviour:
   MagnetForce: 5
   MagnetismSound: {fileID: 8000425203768732174}
   MagnetismParticle: {fileID: 5707346368368716505}
+  Taijitu: {fileID: 0}
+  YinPoint: {fileID: 0}
+  YangPoint: {fileID: 0}
 --- !u!1 &3694503293190236773
 GameObject:
   m_ObjectHideFlags: 0

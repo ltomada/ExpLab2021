@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 4322323956078155799}
   m_Layer: 0
   m_Name: Yin
-  m_TagString: Player
+  m_TagString: Yin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,7 +236,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d442d08bee3d3284eb71ff92e9a9febf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -328,6 +328,9 @@ MonoBehaviour:
   MagnetForce: 5
   MagnetismSound: {fileID: 1464670648514214702}
   MagnetismParticle: {fileID: 9080224856672173708}
+  Taijitu: {fileID: 0}
+  YinPoint: {fileID: 0}
+  YangPoint: {fileID: 0}
 --- !u!1 &4322323956180064765
 GameObject:
   m_ObjectHideFlags: 0
