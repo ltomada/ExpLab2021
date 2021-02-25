@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
     	//Movement key
     	if(Control == true)
 		{
-			if(Yin == true && Yang == false)
+			if(Yin == false && Yang == true)
 			{
 				if(Input.GetKey(KeyCode.D))
 	   			{
@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
 		 	  	rb.AddForce(new Vector2 (0f,-Speed));
 				}	   			
 			}
-			else if(Yin == false && Yang == true)
+			else if(Yin == true && Yang == false)
 			{
 				if(Input.GetKey(KeyCode.RightArrow))
 	   			{
@@ -96,14 +96,14 @@ public class Player : MonoBehaviour
 
 		if((GameObject.Find("Taijitu").GetComponent<CheckPlayer>().YinOnTrigger == true) && (GameObject.Find("Taijitu").GetComponent<CheckPlayer>().YangOnTrigger == true))
 		{
-			if(Yin == true && Yang == false)
+			if(Yin == false && Yang == true)
 			{
 				transform.GetComponent<CircleCollider2D>().enabled = false;
 				Control = false;
 				transform.position = Vector3.Lerp(transform.position, YinPoint.transform.position, Time.deltaTime);
 				StartCoroutine(Union());
 			}
-			else if(Yang == true && Yin == false)
+			else if(Yang == false && Yin == true)
 			{
 				transform.GetComponent<CircleCollider2D>().enabled = false;
 				Control = false;
@@ -116,7 +116,7 @@ public class Player : MonoBehaviour
 		GameObject[]  BlackObjects = GameObject.FindGameObjectsWithTag("BlackTerrain");
 		GameObject[]  WhiteObjects = GameObject.FindGameObjectsWithTag("WhiteTerrain");
 
-		if(Yin == true && Yang == false)
+		if(Yin == false && Yang == true)
 		{
 			foreach (GameObject obj in BlackObjects) 
 			{
@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
 			}
 		}
 
-		if(Yin == false && Yang == true)
+		if(Yin == true && Yang == false)
 		{
 			foreach (GameObject obj in WhiteObjects) 
 			{
@@ -176,6 +176,18 @@ public class Player : MonoBehaviour
 		{
 			CollisionMagnet = true;
 		}
+
+		if(other.gameObject.tag == "Activation")
+		{
+			if(Yang == true && Yin == false)
+			{
+				//other.GetComponent<Activation>().Active = true;
+			}
+			else if(Yin == true && Yang == false)
+			{
+				//other.GetComponent<Activation>().Active = false;
+			}
+		}
 	}
 
 	void OnCollisionExit2D(Collision2D other)
@@ -190,7 +202,7 @@ public class Player : MonoBehaviour
 	{
 		if(other.gameObject.tag == "Magnet" && CollisionMagnet == false)
 		{
-			if(Yin == true && Yang == false)
+			if(Yang == true && Yin == false)
 			{
 				Vector2 direction = transform.position - other.transform.position;
 				float distance = direction.magnitude;
@@ -200,7 +212,7 @@ public class Player : MonoBehaviour
 				other.GetComponent<Rigidbody2D>().AddForce(direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));
 				OtherSObj.GetComponent<Rigidbody2D>().AddForce(direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));
 			}
-			else if(Yin == false && Yang == true)
+			else if(Yang == false && Yin == true)
 			{
 				Vector2 direction = transform.position - other.transform.position;
 				float distance = direction.magnitude;

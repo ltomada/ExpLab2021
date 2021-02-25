@@ -201,7 +201,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8a068b6a42c3fd349bc50222d4ec8899, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1266,6 +1266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 867116755}
   - component: {fileID: 867116759}
+  - component: {fileID: 867116760}
   - component: {fileID: 867116758}
   - component: {fileID: 867116757}
   - component: {fileID: 867116756}
@@ -1363,7 +1364,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8a068b6a42c3fd349bc50222d4ec8899, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1395,6 +1396,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &867116760
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867116754}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 3
+  m_LinearDrag: 1
+  m_AngularDrag: 1
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &913451890
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,6 +2139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1193482430}
   - component: {fileID: 1193482429}
+  - component: {fileID: 1193482433}
   - component: {fileID: 1193482428}
   - component: {fileID: 1193482432}
   - component: {fileID: 1193482431}
@@ -2172,7 +2195,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8a068b6a42c3fd349bc50222d4ec8899, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2246,6 +2269,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RepulsiveForce: 0
+--- !u!50 &1193482433
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193482427}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 3
+  m_LinearDrag: 1
+  m_AngularDrag: 1
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &1233062163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2588,7 +2632,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8a068b6a42c3fd349bc50222d4ec8899, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3256,7 +3300,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8a068b6a42c3fd349bc50222d4ec8899, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3774,7 +3818,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8a068b6a42c3fd349bc50222d4ec8899, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4485,6 +4529,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 2114864629}
     m_Modifications:
     - target: {fileID: 3694503292499187648, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+      propertyPath: Yin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694503292499187648, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+      propertyPath: Yang
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694503292499187648, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: Taijitu
       value: 
       objectReference: {fileID: 1454507461}
@@ -4600,6 +4652,14 @@ PrefabInstance:
     - target: {fileID: 4322323956078155798, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322323956078155799, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+      propertyPath: Yin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322323956078155799, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+      propertyPath: Yang
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4322323956078155799, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: Taijitu
