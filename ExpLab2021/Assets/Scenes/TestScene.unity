@@ -3348,6 +3348,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yin
       objectReference: {fileID: 0}
+    - target: {fileID: 3694503293190236774, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694503293190236775, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
 --- !u!1001 &4322323956171880982
@@ -3416,6 +3424,14 @@ PrefabInstance:
     - target: {fileID: 4322323956078156777, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: m_Name
       value: Yang
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322323956180064760, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322323956180064763, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
