@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
 
 	void Start()
 	{
+		DynamicSplitScreen.SplitScreenManager.Instance.RegisterPlayer(transform);
 	  	Control = true;
 	}
 
@@ -120,7 +121,7 @@ public class Player : MonoBehaviour
 		{
 			foreach (GameObject obj in BlackObjects) 
 			{
-				Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
+				//Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
 			}
 		}
 
@@ -128,7 +129,7 @@ public class Player : MonoBehaviour
 		{
 			foreach (GameObject obj in WhiteObjects) 
 			{
-				Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
+				//Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
 			}
 		}
 

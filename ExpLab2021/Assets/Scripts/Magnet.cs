@@ -25,7 +25,7 @@ public class Magnet : MonoBehaviour
 		{
 			foreach (GameObject obj in BlackObjects) 
 			{
-				Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
+				//Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
 			}
 		}
 
@@ -33,7 +33,7 @@ public class Magnet : MonoBehaviour
 		{
 			foreach (GameObject obj in WhiteObjects) 
 			{
-				Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
+				//Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
 			}
 		}
     }

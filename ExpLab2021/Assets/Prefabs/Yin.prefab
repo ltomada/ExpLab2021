@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 3694503292499187654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.32, y: -5, z: 1.0742188}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 5887074711343301205}
   - {fileID: 3694503293190236772}
@@ -59,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a0193083a5207c49996d5984c7df8ce, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1407,7 +1407,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -4864,17 +4864,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Yin: 1
   Yang: 0
-  Speed: 3
+  Speed: 6
   rb: {fileID: 3694503292499187650}
   Control: 1
   Source: {fileID: 3694503294207432288}
   Collision: {fileID: 8300000, guid: 5c6f667eb0051f241b45f17a5d4e75cb, type: 3}
-  StandardScale: {x: 0.2, y: 0.2}
-  SizeScale: {x: 0.1, y: 0.1}
+  StandardScale: {x: 0.5, y: 0.5}
+  SizeScale: {x: 0.25, y: 0.25}
   SizeSpeed: 5
   StandardSpeed: 0.5
   SizeUp: 0
-  MagnetForce: 5
+  MagnetForce: 50
   MagnetismSound: {fileID: 8000425203768732174}
   MagnetismParticle: {fileID: 1263165714}
   Taijitu: {fileID: 0}
@@ -4900,7 +4900,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a6f3052b7dac50a40aa5d9bb83f348e4, type: 2}
+  - {fileID: 2100000, guid: 089c4a10f9195034eaa216687f2444c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4920,7 +4920,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0.02
@@ -4994,7 +4994,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -9704,7 +9704,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4867e9436d47bc8478f611f60958ac4c, type: 2}
+  - {fileID: 2100000, guid: 9ccf179996bd5df40b23968422bdfee5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9724,7 +9724,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0

@@ -31,9 +31,7 @@ public class LevelLoader : MonoBehaviour
       {
           PlayerPrefs.SetInt("levelAt", SceneToLoad);
       }
-    }
-
-       
+    }  
 
     public void LoadNextLevel(int SceneToLoad)
     {
