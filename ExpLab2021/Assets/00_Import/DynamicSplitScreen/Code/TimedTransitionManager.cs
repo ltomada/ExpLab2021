@@ -15,7 +15,8 @@ public class TimedTransitionManager : SingletonBehaviour<TimedTransitionManager>
             gtm.Awake();
         }
     }
-
+    
+    
     protected override void Awake()
     {
         if (Instance == null)

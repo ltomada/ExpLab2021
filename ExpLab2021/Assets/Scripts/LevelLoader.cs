@@ -31,6 +31,12 @@ public class LevelLoader : MonoBehaviour
       {
           PlayerPrefs.SetInt("levelAt", SceneToLoad);
       }
+
+      if(Input.GetKeyDown(KeyCode.R))
+      {
+         LoadNextLevel(SceneToLoad);
+         transition.SetBool("Fade", true);
+      }
     }  
 
     public void LoadNextLevel(int SceneToLoad)
