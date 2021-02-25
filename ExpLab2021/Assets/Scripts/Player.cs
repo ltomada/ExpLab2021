@@ -210,7 +210,7 @@ public class Player : MonoBehaviour
 				float forceRate = (MagnetForce/ distance);
 				GameObject OtherSObj = other.GetComponent<Magnet>().OtherSideObj;
 				other.GetComponent<Rigidbody2D>().AddForce(direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));
-				OtherSObj.GetComponent<Rigidbody2D>().AddForce(direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));
+				OtherSObj.GetComponent<Rigidbody2D>().AddForce(new Vector2(-direction.x, direction.y) * (forceRate / other.GetComponent<Rigidbody2D>().mass));
 			}
 			else if(Yang == false && Yin == true)
 			{
@@ -220,7 +220,7 @@ public class Player : MonoBehaviour
 				float forceRate = (MagnetForce/ distance);
 				GameObject OtherSObj = other.GetComponent<Magnet>().OtherSideObj;
 				other.GetComponent<Rigidbody2D>().AddForce(-direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));
-				OtherSObj.GetComponent<Rigidbody2D>().AddForce(-direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));		
+				OtherSObj.GetComponent<Rigidbody2D>().AddForce(-new Vector2(-direction.x, direction.y) * (forceRate / other.GetComponent<Rigidbody2D>().mass));		
 			}
 		}				
 	}
