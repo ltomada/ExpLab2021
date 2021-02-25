@@ -42,7 +42,7 @@ Camera:
   m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -87,5 +87,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b356cb0188a7b1941ad5154a5280e4ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHUD: {fileID: 8743577214694306954, guid: 079fa1b95c716a74786a7d7afc80c22c,
-    type: 3}
+  PlayerHUD: {fileID: 8743577214694306954, guid: 079fa1b95c716a74786a7d7afc80c22c, type: 3}
