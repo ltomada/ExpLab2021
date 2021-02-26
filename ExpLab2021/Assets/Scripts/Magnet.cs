@@ -15,26 +15,6 @@ public class Magnet : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Follow movement
-
-        //Ingnora Collisioni Terreno
-		GameObject[]  BlackObjects = GameObject.FindGameObjectsWithTag("BlackTerrain");
-		GameObject[]  WhiteObjects = GameObject.FindGameObjectsWithTag("WhiteTerrain");
-
-		if(White == true && Black == false)
-		{
-			foreach (GameObject obj in BlackObjects) 
-			{
-				//Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
-			}
-		}
-
-		if(White == false && Black == true)
-		{
-			foreach (GameObject obj in WhiteObjects) 
-			{
-				//Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
-			}
-		}
+		
     }
 }

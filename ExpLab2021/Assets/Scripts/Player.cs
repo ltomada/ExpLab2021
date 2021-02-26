@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public float Speed;
 	public Rigidbody2D rb;
 	public bool Control = true;
+  	public bool CollisionMagnet;
 
 	[Header("Audio Clip")]	
 	public AudioSource Source;
@@ -24,12 +25,6 @@ public class Player : MonoBehaviour
 	public float SizeSpeed; 
 	public float StandardSpeed; 
 	public bool SizeUp;
-
-	[Header("Magnet Settings")]	
-	public float MagnetForce;
-	bool CollisionMagnet;
-	public GameObject MagnetismSound;
-	public ParticleSystem MagnetismParticle;
 	
 	[Header("Union Settings")]
 	public GameObject Taijitu;	
@@ -114,23 +109,12 @@ public class Player : MonoBehaviour
 		}
 
 		//Ingnora Collisioni
-		GameObject[]  BlackObjects = GameObject.FindGameObjectsWithTag("BlackTerrain");
-		GameObject[]  WhiteObjects = GameObject.FindGameObjectsWithTag("WhiteTerrain");
+		//GameObject[]  Walls = GameObject.FindGameObjectsWithTag("Wall");
+		GameObject[]  Platform = GameObject.FindGameObjectsWithTag("Platform");
 
-		if(Yin == false && Yang == true)
+		foreach (GameObject obj in Platform) 
 		{
-			foreach (GameObject obj in BlackObjects) 
-			{
-				//Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
-			}
-		}
-
-		if(Yin == true && Yang == false)
-		{
-			foreach (GameObject obj in WhiteObjects) 
-			{
-				//Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
-			}
+			Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()); 
 		}
 
 		//Change Dimension
@@ -177,18 +161,6 @@ public class Player : MonoBehaviour
 		{
 			CollisionMagnet = true;
 		}
-
-		if(other.gameObject.tag == "Activation")
-		{
-			if(Yang == true && Yin == false)
-			{
-				//other.GetComponent<Activation>().Active = true;
-			}
-			else if(Yin == true && Yang == false)
-			{
-				//other.GetComponent<Activation>().Active = false;
-			}
-		}
 	}
 
 	void OnCollisionExit2D(Collision2D other)
@@ -196,51 +168,6 @@ public class Player : MonoBehaviour
 		if(other.gameObject.tag == "Magnet")
 		{
 			CollisionMagnet = false;
-		}
-	}
-
-	void OnTriggerStay2D(Collider2D other)
-	{
-		if(other.gameObject.tag == "Magnet" && CollisionMagnet == false)
-		{
-			if(Yang == true && Yin == false)
-			{
-				Vector2 direction = transform.position - other.transform.position;
-				float distance = direction.magnitude;
-				direction = direction.normalized;
-				float forceRate = (MagnetForce/ distance);
-				GameObject OtherSObj = other.GetComponent<Magnet>().OtherSideObj;
-				other.GetComponent<Rigidbody2D>().AddForce(direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));
-				OtherSObj.GetComponent<Rigidbody2D>().AddForce(new Vector2(-direction.x, direction.y) * (forceRate / other.GetComponent<Rigidbody2D>().mass));
-			}
-			else if(Yang == false && Yin == true)
-			{
-				Vector2 direction = transform.position - other.transform.position;
-				float distance = direction.magnitude;
-				direction = direction.normalized;
-				float forceRate = (MagnetForce/ distance);
-				GameObject OtherSObj = other.GetComponent<Magnet>().OtherSideObj;
-				other.GetComponent<Rigidbody2D>().AddForce(-direction * (forceRate / other.GetComponent<Rigidbody2D>().mass));
-				OtherSObj.GetComponent<Rigidbody2D>().AddForce(-new Vector2(-direction.x, direction.y) * (forceRate / other.GetComponent<Rigidbody2D>().mass));		
-			}
-		}				
-	}
-
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if(other.gameObject.tag == "Magnet")
-		{
-			MagnetismSound.SetActive(true);
-			MagnetismParticle.Play();
-		}
-	}
-
-	void OnTriggerExit2D(Collider2D other)
-	{
-		if(other.gameObject.tag == "Magnet")
-		{
-			MagnetismSound.SetActive(false);
-			MagnetismParticle.Stop();
 		}
 	}
 }
