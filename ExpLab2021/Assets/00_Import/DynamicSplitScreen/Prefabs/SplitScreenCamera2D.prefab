@@ -149,7 +149,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 14
+  orthographic size: 16
   m_Depth: 10
   m_CullingMask:
     serializedVersion: 2
@@ -186,15 +186,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SplitScreenMaterial: {fileID: 2100000, guid: d4d4ed22de982784e9e1a19a13a0bb00, type: 2}
-  TopLayerMaterial: {fileID: 2100000, guid: 3e2160ba5e42cce409c47164f4b0a11c, type: 2}
   NormalMask:
     serializedVersion: 2
     m_Bits: 55
   TopLayerMask:
     serializedVersion: 2
     m_Bits: 32
-  PlayerCameraPrefab: {fileID: 1877332303802268426, guid: b1f7395eb9c1a714ab3bf36feaea35b4,
-    type: 3}
+  PlayerCameraPrefab: {fileID: 1877332303802268426, guid: b1f7395eb9c1a714ab3bf36feaea35b4, type: 3}
   cameraDistance: 10
   MinimumSplitScreenDistanceMultiplier: 0.75
   LockSplitScreen: 0
