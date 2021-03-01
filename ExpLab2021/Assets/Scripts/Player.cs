@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 	public Rigidbody2D rb;
 	public bool Control = true;
   	public bool CollisionMagnet;
+	public GameObject WalkParticle;
 
 	[Header("Audio Clip")]	
 	public AudioSource Source;
@@ -30,6 +31,9 @@ public class Player : MonoBehaviour
 	public GameObject Taijitu;	
 	public Transform YinPoint;
 	public Transform YangPoint;
+
+	[Header("Death Animation")]
+	public Animator Death;
 
 	void Start()
 	{
@@ -88,6 +92,11 @@ public class Player : MonoBehaviour
 		 	  	rb.AddForce(new Vector2 (0f,-Speed));
 				}	   			
 			}      	      		
+		}
+		else
+		{
+			WalkParticle.SetActive(false);
+			Death.SetBool("Death", true);
 		}
 
 		if((GameObject.Find("Taijitu").GetComponent<CheckPlayer>().YinOnTrigger == true) && (GameObject.Find("Taijitu").GetComponent<CheckPlayer>().YangOnTrigger == true))
