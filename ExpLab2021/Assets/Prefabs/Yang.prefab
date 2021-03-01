@@ -42,7 +42,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -60,6 +60,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efecbd89d5bf38b49ada95db27652140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Yin: 0
+  Yang: 1
+  Player: {fileID: 4322323956078156777}
+  MagnetForce: 50
+  MagnetismSound: {fileID: 1464670648514214702}
+  MagnetismParticle: {fileID: 1016076902}
 --- !u!1 &1464670648514214702
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +206,7 @@ GameObject:
   - component: {fileID: 4322323956078155797}
   - component: {fileID: 4322323956078155796}
   - component: {fileID: 1016076902}
+  - component: {fileID: 1210892383}
   - component: {fileID: 4322323956078155799}
   - component: {fileID: 1016076901}
   m_Layer: 0
@@ -5021,6 +5028,25 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!95 &1210892383
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322323956078156777}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9edf6f170987a0845ac6a5abd3d90bc6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4322323956078155799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5038,6 +5064,8 @@ MonoBehaviour:
   Speed: 8
   rb: {fileID: 4322323956078155797}
   Control: 1
+  CollisionMagnet: 0
+  WalkParticle: {fileID: 4322323956180064765}
   Source: {fileID: 4322323956380188179}
   Collision: {fileID: 8300000, guid: 5c6f667eb0051f241b45f17a5d4e75cb, type: 3}
   StandardScale: {x: 0.5, y: 0.5}
@@ -5045,12 +5073,10 @@ MonoBehaviour:
   SizeSpeed: 5
   StandardSpeed: 0.5
   SizeUp: 0
-  MagnetForce: 50
-  MagnetismSound: {fileID: 1464670648514214702}
-  MagnetismParticle: {fileID: 1016076902}
   Taijitu: {fileID: 0}
   YinPoint: {fileID: 0}
   YangPoint: {fileID: 0}
+  Death: {fileID: 1210892383}
 --- !u!199 &1016076901
 ParticleSystemRenderer:
   serializedVersion: 6

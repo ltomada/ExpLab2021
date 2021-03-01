@@ -42,7 +42,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -60,6 +60,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efecbd89d5bf38b49ada95db27652140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Yin: 1
+  Yang: 0
+  Player: {fileID: 3694503292499187654}
+  MagnetForce: 50
+  MagnetismSound: {fileID: 8000425203768732174}
+  MagnetismParticle: {fileID: 1263165714}
 --- !u!1 &3694503292499187654
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,6 +79,7 @@ GameObject:
   - component: {fileID: 3694503292499187650}
   - component: {fileID: 3694503292499187651}
   - component: {fileID: 1263165714}
+  - component: {fileID: 2063943528}
   - component: {fileID: 3694503292499187648}
   - component: {fileID: 1263165713}
   m_Layer: 0
@@ -756,7 +763,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 15
+    maxNumParticles: 5
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4894,6 +4901,25 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!95 &2063943528
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694503292499187654}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35bb8182b6651c84d85d7666af2f0947, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &3694503292499187648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4911,6 +4937,8 @@ MonoBehaviour:
   Speed: 8
   rb: {fileID: 3694503292499187650}
   Control: 1
+  CollisionMagnet: 0
+  WalkParticle: {fileID: 3694503293190236773}
   Source: {fileID: 3694503294207432288}
   Collision: {fileID: 8300000, guid: 5c6f667eb0051f241b45f17a5d4e75cb, type: 3}
   StandardScale: {x: 0.5, y: 0.5}
@@ -4918,12 +4946,10 @@ MonoBehaviour:
   SizeSpeed: 5
   StandardSpeed: 0.5
   SizeUp: 0
-  MagnetForce: 50
-  MagnetismSound: {fileID: 8000425203768732174}
-  MagnetismParticle: {fileID: 1263165714}
   Taijitu: {fileID: 0}
   YinPoint: {fileID: 0}
   YangPoint: {fileID: 0}
+  Death: {fileID: 2063943528}
 --- !u!199 &1263165713
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5038,7 +5064,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
