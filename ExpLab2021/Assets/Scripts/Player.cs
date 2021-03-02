@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
 	public GameObject Taijitu;	
 	public Transform YinPoint;
 	public Transform YangPoint;
+	bool UnionTrigger = false;
 
 	[Header("Death Animation")]
 	public Animator Death;
@@ -106,7 +107,7 @@ public class Player : MonoBehaviour
 		}
 		else
 		{
-			if(scene != "0_MainMenu")
+			if(scene != "0_MainMenu" && UnionTrigger == false)
 			{
 				WalkParticle.SetActive(false);
 				Death.SetBool("Death", true);
@@ -120,6 +121,7 @@ public class Player : MonoBehaviour
 				if(Yin == false && Yang == true)
 				{
 					transform.GetComponent<CircleCollider2D>().enabled = false;
+					UnionTrigger = true;
 					Control = false;
 					transform.position = Vector3.Lerp(transform.position, YinPoint.transform.position, Time.deltaTime);
 					StartCoroutine(Union());
@@ -127,6 +129,7 @@ public class Player : MonoBehaviour
 				else if(Yang == false && Yin == true)
 				{
 					transform.GetComponent<CircleCollider2D>().enabled = false;
+					UnionTrigger = true;
 					Control = false;
 					transform.position = Vector3.Lerp(transform. position, YangPoint.transform.position, Time.deltaTime);
 					StartCoroutine(Union());
