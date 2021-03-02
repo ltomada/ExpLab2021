@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CheckTrigger : MonoBehaviour
 {
-    public bool OnDeathTrigger;
+    public bool Void;
+    public bool Platform;
+    public bool Floor;
 
     void Start()
     {
@@ -20,7 +22,20 @@ public class CheckTrigger : MonoBehaviour
     {
         if(other.gameObject.tag == "Yin" || other.gameObject.tag == "Yang")
         {
-            OnDeathTrigger = true;
+            if(Floor == true)
+            {
+                GameObject.Find("DeathController").GetComponent<DeathZoneController>().FloorTrigger = true;
+            }
+
+            if(Platform == true)
+            {
+                GameObject.Find("DeathController").GetComponent<DeathZoneController>().PlatformTrigger = true;
+            }
+
+            if(Void == true)
+            {
+                GameObject.Find("DeathController").GetComponent<DeathZoneController>().VoidTrigger = true;
+            }
         }
     }
 
@@ -28,7 +43,20 @@ public class CheckTrigger : MonoBehaviour
     {
         if(other.gameObject.tag == "Yin" || other.gameObject.tag == "Yang")
         {
-            OnDeathTrigger = false;
+            if(Floor == true)
+            {
+                GameObject.Find("DeathController").GetComponent<DeathZoneController>().FloorTrigger = false;
+            }
+
+            if(Platform == true)
+            {
+                GameObject.Find("DeathController").GetComponent<DeathZoneController>().PlatformTrigger = false;
+            }
+
+            if(Void == true)
+            {
+                GameObject.Find("DeathController").GetComponent<DeathZoneController>().VoidTrigger = false;
+            }
         }
     }
 }

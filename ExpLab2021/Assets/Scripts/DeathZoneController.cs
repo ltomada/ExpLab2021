@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class DeathZoneController : MonoBehaviour
 {
-    public GameObject OtherSideObj;
-    public GameObject VoidObj;
     public GameObject Yin;
     public GameObject Yang;
     public GameObject DeathSound;
-    public bool OnDeathTrigger;
+    public bool VoidTrigger;
     public bool PlatformTrigger;
+    public bool FloorTrigger;
 
     void Start()
     {
@@ -20,10 +19,8 @@ public class DeathZoneController : MonoBehaviour
 
     void Update()
     {
-        OnDeathTrigger = VoidObj.GetComponent<CheckTrigger>().OnDeathTrigger;
-        PlatformTrigger = OtherSideObj.GetComponent<CheckTrigger>().OnDeathTrigger;
 
-        if(OnDeathTrigger == true && PlatformTrigger == false)
+        if(VoidTrigger == true && PlatformTrigger == false && FloorTrigger == false)
         {
             StartCoroutine(Death());  
             Yin.GetComponent<Player>().Control = false; 
