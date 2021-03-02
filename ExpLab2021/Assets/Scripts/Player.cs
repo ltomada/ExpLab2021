@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 	[Header("Yin or Yang")]
 	public bool Yin;
 	public bool Yang;
+	public GameObject OthersidePlayer;
 
 	[Header("Basic settings")]
     public float Speed;
@@ -179,6 +180,7 @@ public class Player : MonoBehaviour
 			if(SizeUp == false)
 			{
 				StartCoroutine(LerpFunction());
+				StartCoroutine(OthersidePlayer.GetComponent<Player>().LerpFunction());
 			}
 		}
 

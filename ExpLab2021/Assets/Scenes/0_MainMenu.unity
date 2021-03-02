@@ -2573,6 +2573,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 107987379}
     m_Modifications:
+    - target: {fileID: 3694503292499187648, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+      propertyPath: OthersidePlayer
+      value: 
+      objectReference: {fileID: 1756417418}
     - target: {fileID: 3694503292499187649, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2626,6 +2630,11 @@ PrefabInstance:
 --- !u!4 &1098535750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3694503292499187649, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+  m_PrefabInstance: {fileID: 1098535749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1098535751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3694503292499187654, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
   m_PrefabInstance: {fileID: 1098535749}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1130464729
@@ -3460,6 +3469,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4322323956078155799, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+      propertyPath: OthersidePlayer
+      value: 
+      objectReference: {fileID: 1098535751}
     - target: {fileID: 4322323956078156777, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: m_Name
       value: Yang
@@ -3469,6 +3482,11 @@ PrefabInstance:
 --- !u!4 &1756417417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4322323956078155798, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+  m_PrefabInstance: {fileID: 1756417416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1756417418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4322323956078156777, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
   m_PrefabInstance: {fileID: 1756417416}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1794756769
