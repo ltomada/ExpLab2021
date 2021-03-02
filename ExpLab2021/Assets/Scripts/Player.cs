@@ -35,9 +35,19 @@ public class Player : MonoBehaviour
 	[Header("Death Animation")]
 	public Animator Death;
 
+	private Scene ThisScene;
+    private string scene;
+
 	void Start()
 	{
-		DynamicSplitScreen.SplitScreenManager.Instance.RegisterPlayer(transform);
+		ThisScene = SceneManager.GetActiveScene();
+		scene = ThisScene.name;
+
+		if(scene != "0_MainMenu")
+		{
+			DynamicSplitScreen.SplitScreenManager.Instance.RegisterPlayer(transform);
+		}
+
 	  	Control = true;
 	}
 
@@ -95,26 +105,32 @@ public class Player : MonoBehaviour
 		}
 		else
 		{
-			WalkParticle.SetActive(false);
-			Death.SetBool("Death", true);
+			if(scene != "0_MainMenu")
+			{
+				WalkParticle.SetActive(false);
+				Death.SetBool("Death", true);
+			}
 		}
 
-		if((GameObject.Find("Taijitu").GetComponent<CheckPlayer>().YinOnTrigger == true) && (GameObject.Find("Taijitu").GetComponent<CheckPlayer>().YangOnTrigger == true))
+		if(scene != "0_MainMenu")
 		{
-			if(Yin == false && Yang == true)
+			if((GameObject.Find("Taijitu").GetComponent<CheckPlayer>().YinOnTrigger == true) && (GameObject.Find("Taijitu").GetComponent<CheckPlayer>().YangOnTrigger == true))
 			{
-				transform.GetComponent<CircleCollider2D>().enabled = false;
-				Control = false;
-				transform.position = Vector3.Lerp(transform.position, YinPoint.transform.position, Time.deltaTime);
-				StartCoroutine(Union());
-			}
-			else if(Yang == false && Yin == true)
-			{
-				transform.GetComponent<CircleCollider2D>().enabled = false;
-				Control = false;
-				transform.position = Vector3.Lerp(transform. position, YangPoint.transform.position, Time.deltaTime);
-				StartCoroutine(Union());
-			}
+				if(Yin == false && Yang == true)
+				{
+					transform.GetComponent<CircleCollider2D>().enabled = false;
+					Control = false;
+					transform.position = Vector3.Lerp(transform.position, YinPoint.transform.position, Time.deltaTime);
+					StartCoroutine(Union());
+				}
+				else if(Yang == false && Yin == true)
+				{
+					transform.GetComponent<CircleCollider2D>().enabled = false;
+					Control = false;
+					transform.position = Vector3.Lerp(transform. position, YangPoint.transform.position, Time.deltaTime);
+					StartCoroutine(Union());
+				}
+			}			
 		}
 
 		//Ingnora Collisioni

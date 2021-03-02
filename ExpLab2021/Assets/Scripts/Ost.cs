@@ -14,6 +14,6 @@ public class Ost : MonoBehaviour
 
     void Update()
     {
-        //DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
     }
 }
