@@ -20,7 +20,7 @@ public class CheckPlayer : MonoBehaviour
     {
         if(YinOnTrigger == true && YangOnTrigger == true)
         {
-            UnionSound.SetActive(true);
+            StartCoroutine(Wait());
         }
     }
 
@@ -35,5 +35,11 @@ public class CheckPlayer : MonoBehaviour
         {
             YangOnTrigger = true;
         }
+    }
+
+    public IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2.8f);
+        UnionSound.SetActive(true);
     }
 }

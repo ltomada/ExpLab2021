@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7bfd2a80de29942a9025963fdc039b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: -0.65
+  RotateSpeed: -0.7
   RotateOnX: 0
   RotateOnY: 0
   RotateOnZ: 1
@@ -250,7 +250,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6d5f457baf7588f44870ca6f709c588b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
