@@ -19,7 +19,7 @@ public class CheckTrigger : MonoBehaviour
         
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Yin" || other.gameObject.tag == "Yang")
         {
@@ -28,16 +28,23 @@ public class CheckTrigger : MonoBehaviour
                 GameObject.Find("DeathController").GetComponent<DeathZoneController>().FloorTrigger = true;
             }
 
-            if(Platform == true)
-            {
-                GameObject.Find("DeathController").GetComponent<DeathZoneController>().PlatformTrigger = true;
-            }
-
             if(Void == true)
             {
                 GameObject.Find("DeathController").GetComponent<DeathZoneController>().VoidTrigger = true;
             }
         }
+    }
+
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Yin" || other.gameObject.tag == "Yang")
+        {   
+            if(Platform == true)
+            {
+                GameObject.Find("DeathController").GetComponent<DeathZoneController>().PlatformTrigger = true;
+            }
+        }     
     }
 
     void OnTriggerExit2D(Collider2D other)
