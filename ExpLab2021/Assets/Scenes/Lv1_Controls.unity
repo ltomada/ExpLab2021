@@ -134,9 +134,21 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3694503292499187648, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+      propertyPath: Taijitu
+      value: 
+      objectReference: {fileID: 962630623}
+    - target: {fileID: 3694503292499187648, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+      propertyPath: YinPoint
+      value: 
+      objectReference: {fileID: 962630622}
+    - target: {fileID: 3694503292499187648, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+      propertyPath: YangPoint
+      value: 
+      objectReference: {fileID: 962630621}
     - target: {fileID: 3694503292499187649, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 3694503292499187649, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -257,6 +269,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &503513653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3694503292499187654, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+  m_PrefabInstance: {fileID: 60698137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &577107011
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +610,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -150
       objectReference: {fileID: 0}
+    - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
+      propertyPath: Yin
+      value: 
+      objectReference: {fileID: 503513653}
+    - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
+      propertyPath: Yang
+      value: 
+      objectReference: {fileID: 1725087694}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
 --- !u!4 &962630620 stripped
@@ -1771,7 +1796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4322323956078155798, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 4322323956078155798, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1781,6 +1806,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4322323956078155799, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+      propertyPath: Taijitu
+      value: 
+      objectReference: {fileID: 962630623}
+    - target: {fileID: 4322323956078155799, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+      propertyPath: YinPoint
+      value: 
+      objectReference: {fileID: 962630622}
+    - target: {fileID: 4322323956078155799, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+      propertyPath: YangPoint
+      value: 
+      objectReference: {fileID: 962630621}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
 --- !u!4 &1383676493 stripped
@@ -2981,6 +3018,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1725087694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4322323956078156777, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+  m_PrefabInstance: {fileID: 1383676492}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1811012873
 PrefabInstance:
   m_ObjectHideFlags: 0
