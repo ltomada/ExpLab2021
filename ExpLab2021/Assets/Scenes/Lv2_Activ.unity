@@ -388,16 +388,21 @@ PrefabInstance:
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yin
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1713947513}
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yang
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 382204530}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
 --- !u!4 &382204529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5477315799956605421, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
+  m_PrefabInstance: {fileID: 382204528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &382204530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5477315800119327809, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
   m_PrefabInstance: {fileID: 382204528}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &430119994
@@ -5392,7 +5397,7 @@ PrefabInstance:
     - target: {fileID: 3694503292499187648, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: OthersidePlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1301691789}
     - target: {fileID: 3694503292499187649, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5585,7 +5590,6 @@ GameObject:
   - component: {fileID: 1584261895}
   - component: {fileID: 1584261894}
   - component: {fileID: 1584261893}
-  - component: {fileID: 1584261892}
   - component: {fileID: 1584261891}
   m_Layer: 0
   m_Name: Void0
@@ -5624,19 +5628,6 @@ MonoBehaviour:
   Platform: 0
   Floor: 0
   Hallway: 0
---- !u!114 &1584261892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584261889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597f5b908d35fbe4f96f4332ddae1a91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RepulsiveForce: 3
 --- !u!19719996 &1584261893
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -6836,7 +6827,7 @@ PrefabInstance:
     - target: {fileID: 4322323956078155799, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: OthersidePlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1713947513}
     - target: {fileID: 4322323956078156777, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: m_Name
       value: Yang
