@@ -5048,6 +5048,8 @@ MonoBehaviour:
   YinPoint: {fileID: 0}
   YangPoint: {fileID: 0}
   Death: {fileID: 2063943528}
+  MagneticAbility: {fileID: 63038152}
+  MagneticEffect: {fileID: 1835130292}
 --- !u!1 &3694503293190236773
 GameObject:
   m_ObjectHideFlags: 0

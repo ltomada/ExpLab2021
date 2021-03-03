@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
 
 	[Header("Death Animation")]
 	public Animator Death;
+	public GameObject MagneticAbility;
+	public GameObject MagneticEffect;
 
 	private Scene ThisScene;
     private string scene;
@@ -110,6 +112,8 @@ public class Player : MonoBehaviour
 			if(scene != "0_MainMenu" && UnionTrigger == false)
 			{
 				WalkParticle.SetActive(false);
+				MagneticAbility.SetActive(false);
+				MagneticEffect.SetActive(false);
 				Death.SetBool("Death", true);
 			}
 		}
