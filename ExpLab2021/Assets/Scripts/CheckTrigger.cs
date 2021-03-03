@@ -7,6 +7,7 @@ public class CheckTrigger : MonoBehaviour
     public bool Void;
     public bool Platform;
     public bool Floor;
+    public bool Hallway;
 
     void Start()
     {
@@ -58,5 +59,13 @@ public class CheckTrigger : MonoBehaviour
                 GameObject.Find("DeathController").GetComponent<DeathZoneController>().VoidTrigger = false;
             }
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+       if(other.gameObject.tag == "Yin" && Hallway == true && other.gameObject.transform.localScale.magnitude > 0.49f) 
+       {
+           GameObject.Find("DeathController").GetComponent<DeathZoneController>().Hallway = true;
+       }
     }
 }

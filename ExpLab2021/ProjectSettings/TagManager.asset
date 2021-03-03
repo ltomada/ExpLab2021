@@ -13,6 +13,7 @@ TagManager:
   - BlackTerrain
   - WhiteTerrain
   - Platform
+  - Hallway
   layers:
   - Default
   - TransparentFX

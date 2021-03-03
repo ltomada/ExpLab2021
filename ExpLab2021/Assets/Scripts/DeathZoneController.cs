@@ -10,6 +10,7 @@ public class DeathZoneController : MonoBehaviour
     public bool VoidTrigger;
     public bool PlatformTrigger;
     public bool FloorTrigger;
+    public bool Hallway;
 
     void Start()
     {
@@ -25,6 +26,13 @@ public class DeathZoneController : MonoBehaviour
             StartCoroutine(Death());  
             Yin.GetComponent<Player>().Control = false; 
             Yang.GetComponent<Player>().Control = false;        
+        }
+
+        if(Hallway == true)
+        {
+            StartCoroutine(Death());  
+            Yin.GetComponent<Player>().Control = false; 
+            Yang.GetComponent<Player>().Control = false; 
         }
     }
 
