@@ -542,10 +542,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Taijitu
       objectReference: {fileID: 0}
-    - target: {fileID: 5477315799956605420, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
-      propertyPath: RotateSpeed
-      value: -0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 5477315799956605421, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: m_RootOrder
       value: 3
