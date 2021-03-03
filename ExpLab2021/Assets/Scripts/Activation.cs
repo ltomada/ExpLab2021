@@ -7,6 +7,8 @@ public class Activation : MonoBehaviour
     [Header("Basic Activato Settings")]
     public GameObject ObjToActive0;
     public GameObject ObjToActive1;
+    public bool Rotation;
+    public bool Translation;
 
 
     void Start()
@@ -23,14 +25,30 @@ public class Activation : MonoBehaviour
     {
         if(other.gameObject.tag == "Yin")
         {
-            ObjToActive0.GetComponent<MovingPlatform>().Active = false;
-            ObjToActive1.GetComponent<MovingPlatform>().Active = false; 
+            if(Translation == true)
+            {
+                ObjToActive0.GetComponent<MovingPlatform>().Active = false;
+                ObjToActive1.GetComponent<MovingPlatform>().Active = false; 
+            }
+            else if(Rotation == true)
+            {
+                ObjToActive0.GetComponent<RotationObj>().Active = false;
+                ObjToActive1.GetComponent<RotationObj>().Active = false;                
+            }
         }
 
         if(other.gameObject.tag == "Yang")
         {
-            ObjToActive0.GetComponent<MovingPlatform>().Active = true;
-            ObjToActive1.GetComponent<MovingPlatform>().Active = true;  
+            if(Translation == true)
+            {
+                ObjToActive0.GetComponent<MovingPlatform>().Active = true;
+                ObjToActive1.GetComponent<MovingPlatform>().Active = true; 
+            }
+            else if(Rotation == true)
+            {
+                ObjToActive0.GetComponent<RotationObj>().Active = true;
+                ObjToActive1.GetComponent<RotationObj>().Active = true;             
+            }
         }
     }
 }
