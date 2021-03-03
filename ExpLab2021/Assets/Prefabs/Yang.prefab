@@ -5159,7 +5159,7 @@ MonoBehaviour:
   Yin: 0
   Yang: 1
   OthersidePlayer: {fileID: 0}
-  Speed: 8
+  Speed: 9
   rb: {fileID: 4322323956078155797}
   Control: 1
   CollisionMagnet: 0
