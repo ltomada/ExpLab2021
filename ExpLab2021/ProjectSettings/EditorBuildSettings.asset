@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lv2_Activ.unity
     guid: eea36a64e554f3749801de6fa0d70b59
+  - enabled: 1
+    path: Assets/Scenes/Lv3_Activ2.unity
+    guid: a4be289f11ac14c42944b3ab5b3d4c5e
+  - enabled: 1
+    path: Assets/Scenes/Lv4_ActivSize.unity
+    guid: 4cd8667fb6b904f42afa452a683613e8
+  - enabled: 1
+    path: Assets/Scenes/Lv5_Magn.unity
+    guid: 54855c30a7a08ab4bac635482f55fcb8
+  - enabled: 1
+    path: Assets/Scenes/Lv6_ActivSizeMagn.unity
+    guid: 271bf6f1f4b5a2a488ef720bc25721c8
   m_configObjects: {}
