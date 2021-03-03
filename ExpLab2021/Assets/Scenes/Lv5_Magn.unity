@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 54880739}
   - component: {fileID: 54880738}
   - component: {fileID: 54880737}
+  - component: {fileID: 54880743}
   m_Layer: 0
   m_Name: WhiteOtherSideBlock
   m_TagString: Platform
@@ -298,6 +299,18 @@ Transform:
   m_Father: {fileID: 2007113753}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &54880743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54880736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7c59361b40ad749a777dd389a203e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &386375765
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +645,7 @@ GameObject:
   - component: {fileID: 605372617}
   - component: {fileID: 605372616}
   - component: {fileID: 605372615}
+  - component: {fileID: 605372621}
   m_Layer: 0
   m_Name: WhiteOtherSideBlock (1)
   m_TagString: Platform
@@ -793,6 +807,18 @@ Transform:
   m_Father: {fileID: 2025337228}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &605372621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605372614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7c59361b40ad749a777dd389a203e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &616324988
 PrefabInstance:
   m_ObjectHideFlags: 0
