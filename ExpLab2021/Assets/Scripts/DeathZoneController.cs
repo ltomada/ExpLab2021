@@ -41,6 +41,7 @@ public class DeathZoneController : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         DeathSound.SetActive(true);
         yield return new WaitForSeconds(1.0f);
+        GameObject.Find("LevelLoader").GetComponent<LevelLoader>().SceneToLoad = GameObject.Find("LevelLoader").GetComponent<LevelLoader>().SceneInt;
         GameObject.Find("LevelLoader").GetComponent<LevelLoader>().Fade = true;
     }
 }

@@ -14,11 +14,13 @@ public class LevelLoader : MonoBehaviour
 
     private Scene ThisScene;
     private string scene;
+    public int SceneInt;
 
     void Update()
     {
        ThisScene = SceneManager.GetActiveScene();
        scene = ThisScene.name;
+       SceneInt = SceneManager.GetActiveScene().buildIndex;
  
 
       if(Fade == true)
