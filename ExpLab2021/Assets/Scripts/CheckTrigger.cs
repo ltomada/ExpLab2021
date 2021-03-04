@@ -16,7 +16,7 @@ public class CheckTrigger : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -25,12 +25,12 @@ public class CheckTrigger : MonoBehaviour
         {
             if(Floor == true)
             {
-                GameObject.Find("DeathController").GetComponent<DeathZoneController>().FloorTrigger = true;
+                other.gameObject.GetComponent<Player>().OnFloor = true;
             }
 
             if(Void == true)
             {
-                GameObject.Find("DeathController").GetComponent<DeathZoneController>().VoidTrigger = true;
+                other.gameObject.GetComponent<Player>().OnVoid = true;
             }
         }
     }
@@ -42,7 +42,7 @@ public class CheckTrigger : MonoBehaviour
         {   
             if(Platform == true)
             {
-                GameObject.Find("DeathController").GetComponent<DeathZoneController>().PlatformTrigger = true;
+                other.gameObject.GetComponent<Player>().OnPlatform = true;
             }
         }     
     }
@@ -53,17 +53,17 @@ public class CheckTrigger : MonoBehaviour
         {
             if(Floor == true)
             {
-                GameObject.Find("DeathController").GetComponent<DeathZoneController>().FloorTrigger = false;
+                other.gameObject.GetComponent<Player>().OnFloor = false;
             }
 
             if(Platform == true)
             {
-                GameObject.Find("DeathController").GetComponent<DeathZoneController>().PlatformTrigger = false;
+                other.gameObject.GetComponent<Player>().OnPlatform = false;
             }
 
             if(Void == true)
             {
-                GameObject.Find("DeathController").GetComponent<DeathZoneController>().VoidTrigger = false;
+                other.gameObject.GetComponent<Player>().OnVoid = false;
             }
         }
     }
@@ -72,7 +72,7 @@ public class CheckTrigger : MonoBehaviour
     {
        if(other.gameObject.tag == "Yin" && Hallway == true && other.gameObject.transform.localScale.magnitude > 0.49f) 
        {
-           GameObject.Find("DeathController").GetComponent<DeathZoneController>().Hallway = true;
+           GameObject.Find("DeathController").GetComponent<DeathController>().Hallway = true;
        }
     }
 }

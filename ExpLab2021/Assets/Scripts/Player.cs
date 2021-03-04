@@ -38,6 +38,9 @@ public class Player : MonoBehaviour
 	public Animator Death;
 	public GameObject MagneticAbility;
 	public GameObject MagneticEffect;
+	public bool OnVoid;
+	public bool OnPlatform;
+	public bool OnFloor;
 
 	private Scene ThisScene;
     private string scene;

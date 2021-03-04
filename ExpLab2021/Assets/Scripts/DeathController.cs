@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathZoneController : MonoBehaviour
+public class DeathController : MonoBehaviour
 {
     public GameObject Yin;
     public GameObject Yang;
     public GameObject DeathSound;
-    public bool VoidTrigger;
-    public bool PlatformTrigger;
-    public bool FloorTrigger;
     public bool Hallway;
+
 
     void Start()
     {
@@ -21,7 +19,14 @@ public class DeathZoneController : MonoBehaviour
     void Update()
     {
 
-        if(VoidTrigger == true && PlatformTrigger == false && FloorTrigger == false)
+        if(Yin.GetComponent<Player>().OnVoid == true && Yin.GetComponent<Player>().OnPlatform == false && Yin.GetComponent<Player>().OnFloor == false)
+        {
+            StartCoroutine(Death());  
+            Yin.GetComponent<Player>().Control = false; 
+            Yang.GetComponent<Player>().Control = false;        
+        }
+
+        if(Yang.GetComponent<Player>().OnVoid == true && Yang.GetComponent<Player>().OnPlatform == false && Yang.GetComponent<Player>().OnFloor == false)
         {
             StartCoroutine(Death());  
             Yin.GetComponent<Player>().Control = false; 
