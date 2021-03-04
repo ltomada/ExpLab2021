@@ -996,9 +996,6 @@ MonoBehaviour:
   Yin: {fileID: 1750749731}
   Yang: {fileID: 508030092}
   DeathSound: {fileID: 469221996}
-  VoidTrigger: 0
-  PlatformTrigger: 0
-  FloorTrigger: 0
   Hallway: 0
 --- !u!4 &644122696
 Transform:
@@ -6203,6 +6200,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2007113753}
     m_Modifications:
+    - target: {fileID: 1629283754524236403, guid: 18cd4b04ddf36784791bccb34999c5a8, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1629283754524236404, guid: 18cd4b04ddf36784791bccb34999c5a8, type: 3}
       propertyPath: m_Name
       value: WhiteMagneticBlock
