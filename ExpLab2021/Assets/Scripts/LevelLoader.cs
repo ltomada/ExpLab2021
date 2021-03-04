@@ -36,6 +36,12 @@ public class LevelLoader : MonoBehaviour
 
       if(Input.GetKeyDown(KeyCode.R))
       {
+         LoadNextLevel(SceneInt);
+         transition.SetBool("Fade", true);
+      }
+
+      if(Input.GetKeyDown(KeyCode.L))
+      {
          LoadNextLevel(SceneToLoad);
          transition.SetBool("Fade", true);
       }

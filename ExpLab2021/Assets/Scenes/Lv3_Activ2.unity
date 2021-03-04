@@ -1599,7 +1599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1142346261409354691, guid: d83f0fd3fa955ff4f9d5f2a7032742b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.122177
+      value: -9.54
       objectReference: {fileID: 0}
     - target: {fileID: 1142346261409354691, guid: d83f0fd3fa955ff4f9d5f2a7032742b9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6818,7 +6818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1142346261409354691, guid: d83f0fd3fa955ff4f9d5f2a7032742b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.122177
+      value: -9.54
       objectReference: {fileID: 0}
     - target: {fileID: 1142346261409354691, guid: d83f0fd3fa955ff4f9d5f2a7032742b9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6947,9 +6947,6 @@ MonoBehaviour:
   Yin: {fileID: 671150692}
   Yang: {fileID: 223767773}
   DeathSound: {fileID: 2102292883}
-  VoidTrigger: 0
-  PlatformTrigger: 0
-  FloorTrigger: 0
   Hallway: 0
 --- !u!4 &1811109150
 Transform:
@@ -8887,7 +8884,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142346260179950885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.667591, y: -8.022177, z: 46.04477}
+  m_LocalPosition: {x: 19.667591, y: -9.54, z: 46.04477}
   m_LocalScale: {x: 1.8, y: 1.8, z: 0.4}
   m_Children: []
   m_Father: {fileID: 991489218}
@@ -9034,7 +9031,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142346261690956457}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.80759, y: -8.112177, z: 46.04477}
+  m_LocalPosition: {x: 37.80759, y: -9.54, z: 46.04477}
   m_LocalScale: {x: 1.8, y: 1.8, z: 0.4}
   m_Children: []
   m_Father: {fileID: 2100118476}

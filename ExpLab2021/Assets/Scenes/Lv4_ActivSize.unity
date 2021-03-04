@@ -452,7 +452,7 @@ PrefabInstance:
     - target: {fileID: 3694503292499187648, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: OthersidePlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1684500915}
     - target: {fileID: 3694503292499187649, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5561,7 +5561,7 @@ PrefabInstance:
     - target: {fileID: 4322323956078155799, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: OthersidePlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 197694166}
     - target: {fileID: 4322323956078156777, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: m_Name
       value: Yang
@@ -5740,9 +5740,6 @@ MonoBehaviour:
   Yin: {fileID: 197694166}
   Yang: {fileID: 1684500915}
   DeathSound: {fileID: 960670294}
-  VoidTrigger: 0
-  PlatformTrigger: 0
-  FloorTrigger: 0
   Hallway: 0
 --- !u!4 &1919111595
 Transform:
