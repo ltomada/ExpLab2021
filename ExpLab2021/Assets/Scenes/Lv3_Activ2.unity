@@ -277,7 +277,7 @@ PrefabInstance:
     - target: {fileID: 4322323956078155799, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: OthersidePlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 671150692}
     - target: {fileID: 4322323956078156777, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: m_Name
       value: Yang
@@ -651,6 +651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 7028951221671037689, guid: eb1cd98085cee40449d39a70a3acd7c7, type: 3}
+      propertyPath: m_Size.y
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb1cd98085cee40449d39a70a3acd7c7, type: 3}
 --- !u!4 &436502683 stripped
@@ -685,6 +689,14 @@ PrefabInstance:
     - target: {fileID: 4571806686005489541, guid: eb1cd98085cee40449d39a70a3acd7c7, type: 3}
       propertyPath: Platform
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571806686005489541, guid: eb1cd98085cee40449d39a70a3acd7c7, type: 3}
+      propertyPath: countdown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571806686005489541, guid: eb1cd98085cee40449d39a70a3acd7c7, type: 3}
+      propertyPath: stopwatch
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4571806686005489542, guid: eb1cd98085cee40449d39a70a3acd7c7, type: 3}
       propertyPath: m_RootOrder
@@ -733,6 +745,14 @@ PrefabInstance:
     - target: {fileID: 4571806686005489560, guid: eb1cd98085cee40449d39a70a3acd7c7, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028951221671037689, guid: eb1cd98085cee40449d39a70a3acd7c7, type: 3}
+      propertyPath: m_Size.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028951221671037689, guid: eb1cd98085cee40449d39a70a3acd7c7, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb1cd98085cee40449d39a70a3acd7c7, type: 3}
@@ -1076,7 +1096,7 @@ PrefabInstance:
     - target: {fileID: 3694503292499187648, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: OthersidePlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 223767773}
     - target: {fileID: 3694503292499187649, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5052,6 +5072,8 @@ MonoBehaviour:
   Platform: 0
   Floor: 1
   Hallway: 0
+  countdown: 3
+  stopwatch: 0
 --- !u!19719996 &1416554100
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -5453,6 +5475,8 @@ MonoBehaviour:
   Platform: 0
   Floor: 0
   Hallway: 0
+  countdown: 3
+  stopwatch: 0
 --- !u!19719996 &1788925413
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -8696,6 +8720,8 @@ MonoBehaviour:
   Platform: 0
   Floor: 1
   Hallway: 0
+  countdown: 3
+  stopwatch: 0
 --- !u!19719996 &1973075071
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -9172,6 +9198,8 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
+  countdown: 3
+  stopwatch: 0
 --- !u!4 &2545323211226596367
 Transform:
   m_ObjectHideFlags: 0
@@ -9374,6 +9402,8 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
+  countdown: 3
+  stopwatch: 0
 --- !u!4 &2545323211264710290
 Transform:
   m_ObjectHideFlags: 0
@@ -9490,6 +9520,8 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
+  countdown: 3
+  stopwatch: 0
 --- !u!4 &4571806684840210523
 Transform:
   m_ObjectHideFlags: 0
@@ -9534,6 +9566,8 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
+  countdown: 3
+  stopwatch: 0
 --- !u!212 &4571806685361385978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9872,7 +9906,7 @@ BoxCollider2D:
     adaptiveTiling: 1
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.5, y: 12}
+  m_Size: {x: 5.5, y: 9}
   m_EdgeRadius: 0
 --- !u!61 &7028951222857291044
 BoxCollider2D:
@@ -9898,5 +9932,5 @@ BoxCollider2D:
     adaptiveTiling: 1
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.5, y: 12}
+  m_Size: {x: 5.5, y: 9}
   m_EdgeRadius: 0

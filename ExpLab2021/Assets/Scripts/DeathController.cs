@@ -7,6 +7,8 @@ public class DeathController : MonoBehaviour
     public GameObject Yin;
     public GameObject Yang;
     public GameObject DeathSound;
+    public float countdown;
+    public float stopwatch;
     public bool Hallway;
 
 
@@ -14,6 +16,8 @@ public class DeathController : MonoBehaviour
     {
         Yin = GameObject.FindGameObjectWithTag("Yin");
         Yang = GameObject.FindGameObjectWithTag("Yang");
+        countdown = 0.25f;
+        stopwatch = 0;
     }
 
     void Update()
@@ -21,16 +25,34 @@ public class DeathController : MonoBehaviour
 
         if(Yin.GetComponent<Player>().OnVoid == true && Yin.GetComponent<Player>().OnPlatform == false && Yin.GetComponent<Player>().OnFloor == false)
         {
-            StartCoroutine(Death());  
-            Yin.GetComponent<Player>().Control = false; 
-            Yang.GetComponent<Player>().Control = false;        
+            stopwatch += Time.deltaTime;
+            if (stopwatch >= countdown)
+            {
+                StartCoroutine(Death());  
+                Yin.GetComponent<Player>().Control = false; 
+                Yang.GetComponent<Player>().Control = false;   
+            }     
         }
 
         if(Yang.GetComponent<Player>().OnVoid == true && Yang.GetComponent<Player>().OnPlatform == false && Yang.GetComponent<Player>().OnFloor == false)
         {
-            StartCoroutine(Death());  
-            Yin.GetComponent<Player>().Control = false; 
-            Yang.GetComponent<Player>().Control = false;        
+            stopwatch += Time.deltaTime;
+            if (stopwatch >= countdown)
+            {
+                StartCoroutine(Death());  
+                Yin.GetComponent<Player>().Control = false; 
+                Yang.GetComponent<Player>().Control = false;   
+            }         
+        }
+
+        if(Yang.GetComponent<Player>().OnPlatform == true && Yin.GetComponent<Player>().OnPlatform == true)
+        {
+            stopwatch = 0;
+        }
+
+        if(Yang.GetComponent<Player>().OnFloor == true && Yin.GetComponent<Player>().OnFloor == true)
+        {
+            stopwatch = 0;
         }
 
         if(Hallway == true)

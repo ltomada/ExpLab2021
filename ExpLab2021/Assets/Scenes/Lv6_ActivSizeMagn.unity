@@ -615,6 +615,9 @@ MonoBehaviour:
   Platform: 0
   Floor: 0
   Hallway: 1
+  countdown: 0
+  stopwatch: 0
+  OtherObj: {fileID: 0}
 --- !u!1 &170636720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,6 +1297,9 @@ MonoBehaviour:
   Platform: 0
   Floor: 0
   Hallway: 1
+  countdown: 0
+  stopwatch: 0
+  OtherObj: {fileID: 0}
 --- !u!1001 &391471616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2032,9 +2038,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 1815995197}
     m_Modifications:
     - target: {fileID: 3694503292499187648, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+      propertyPath: Taijitu
+      value: 
+      objectReference: {fileID: 1854607778}
+    - target: {fileID: 3694503292499187648, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+      propertyPath: YinPoint
+      value: 
+      objectReference: {fileID: 1854607777}
+    - target: {fileID: 3694503292499187648, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+      propertyPath: YangPoint
+      value: 
+      objectReference: {fileID: 1854607776}
+    - target: {fileID: 3694503292499187648, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: OthersidePlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1682893957}
     - target: {fileID: 3694503292499187649, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 120
@@ -2102,13 +2120,23 @@ PrefabInstance:
     - target: {fileID: 4322323956078155799, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: OthersidePlayer
       value: 
-      objectReference: {fileID: 994582363}
+      objectReference: {fileID: 0}
     - target: {fileID: 4322323956078156777, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
       propertyPath: m_Name
       value: Yang
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+--- !u!1 &766729867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3694503292499187654, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+  m_PrefabInstance: {fileID: 766729866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &766729868 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3694503292499187649, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+  m_PrefabInstance: {fileID: 766729866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &776409240
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,6 +2211,9 @@ MonoBehaviour:
   Platform: 0
   Floor: 0
   Hallway: 1
+  countdown: 0
+  stopwatch: 0
+  OtherObj: {fileID: 0}
 --- !u!1 &854552474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,16 +2591,6 @@ Transform:
   m_Father: {fileID: 1236899688}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &994582363 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694503292499187654, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
-  m_PrefabInstance: {fileID: 1682893955}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &994582364 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3694503292499187649, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
-  m_PrefabInstance: {fileID: 1682893955}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &996068307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7115,16 +7136,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4571806686005489560, guid: eb1cd98085cee40449d39a70a3acd7c7, type: 3}
   m_PrefabInstance: {fileID: 1310385513}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1317064611 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4322323956078156777, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
-  m_PrefabInstance: {fileID: 766729866}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1317064612 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4322323956078155798, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
-  m_PrefabInstance: {fileID: 766729866}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1317883646 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2545323211289085617, guid: fadf35c3309d07946ae0931eafcf1bc1, type: 3}
@@ -10036,6 +10047,9 @@ MonoBehaviour:
   Platform: 0
   Floor: 1
   Hallway: 0
+  countdown: 0
+  stopwatch: 0
+  OtherObj: {fileID: 0}
 --- !u!19719996 &1416554100
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -10386,7 +10400,7 @@ PrefabInstance:
     - target: {fileID: 3694503292499187648, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: OthersidePlayer
       value: 
-      objectReference: {fileID: 1317064611}
+      objectReference: {fileID: 0}
     - target: {fileID: 3694503292499187649, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10448,11 +10462,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4322323956078155799, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+      propertyPath: Taijitu
+      value: 
+      objectReference: {fileID: 1854607778}
+    - target: {fileID: 4322323956078155799, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+      propertyPath: YinPoint
+      value: 
+      objectReference: {fileID: 1854607777}
+    - target: {fileID: 4322323956078155799, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+      propertyPath: YangPoint
+      value: 
+      objectReference: {fileID: 1854607776}
+    - target: {fileID: 4322323956078155799, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
       propertyPath: OthersidePlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 766729867}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+--- !u!4 &1682893956 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4322323956078155798, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+  m_PrefabInstance: {fileID: 1682893955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1682893957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4322323956078156777, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+  m_PrefabInstance: {fileID: 1682893955}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1687552667
 GameObject:
   m_ObjectHideFlags: 0
@@ -10831,8 +10867,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -9, z: 40.096447}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 994582364}
-  - {fileID: 1317064612}
+  - {fileID: 766729868}
+  - {fileID: 1682893956}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11012,11 +11048,11 @@ PrefabInstance:
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yin
       value: 
-      objectReference: {fileID: 994582363}
+      objectReference: {fileID: 0}
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yang
       value: 
-      objectReference: {fileID: 1317064611}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
 --- !u!4 &1854607775 stripped
@@ -11113,6 +11149,9 @@ MonoBehaviour:
   Platform: 0
   Floor: 0
   Hallway: 1
+  countdown: 0
+  stopwatch: 0
+  OtherObj: {fileID: 0}
 --- !u!1001 &1856761931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13643,6 +13682,9 @@ MonoBehaviour:
   Platform: 0
   Floor: 1
   Hallway: 0
+  countdown: 0
+  stopwatch: 0
+  OtherObj: {fileID: 0}
 --- !u!19719996 &1973075071
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -13775,6 +13817,9 @@ MonoBehaviour:
   Platform: 0
   Floor: 0
   Hallway: 0
+  countdown: 0
+  stopwatch: 0
+  OtherObj: {fileID: 0}
 --- !u!19719996 &2040896945
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -16211,6 +16256,9 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
+  countdown: 0
+  stopwatch: 0
+  OtherObj: {fileID: 0}
 --- !u!4 &2545323210940787230
 Transform:
   m_ObjectHideFlags: 0
@@ -16327,6 +16375,9 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
+  countdown: 0
+  stopwatch: 0
+  OtherObj: {fileID: 0}
 --- !u!4 &2545323211682647922
 Transform:
   m_ObjectHideFlags: 0
@@ -16357,6 +16408,9 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
+  countdown: 0
+  stopwatch: 0
+  OtherObj: {fileID: 0}
 --- !u!4 &4571806685072034795
 Transform:
   m_ObjectHideFlags: 0
@@ -16573,6 +16627,9 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
+  countdown: 0
+  stopwatch: 0
+  OtherObj: {fileID: 0}
 --- !u!61 &7028951221160580199
 BoxCollider2D:
   m_ObjectHideFlags: 0
