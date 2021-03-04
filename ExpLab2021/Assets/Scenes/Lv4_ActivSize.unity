@@ -813,11 +813,11 @@ PrefabInstance:
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yin
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 197694166}
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yang
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1684500915}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
 --- !u!4 &360315622 stripped
@@ -5740,6 +5740,8 @@ MonoBehaviour:
   Yin: {fileID: 197694166}
   Yang: {fileID: 1684500915}
   DeathSound: {fileID: 960670294}
+  countdown: 0
+  stopwatch: 0
   Hallway: 0
 --- !u!4 &1919111595
 Transform:

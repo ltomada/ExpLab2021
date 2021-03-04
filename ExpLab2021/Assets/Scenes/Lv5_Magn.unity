@@ -996,6 +996,8 @@ MonoBehaviour:
   Yin: {fileID: 1750749731}
   Yang: {fileID: 508030092}
   DeathSound: {fileID: 469221996}
+  countdown: 0
+  stopwatch: 0
   Hallway: 0
 --- !u!4 &644122696
 Transform:
@@ -4802,11 +4804,11 @@ PrefabInstance:
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yin
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1750749731}
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yang
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 508030092}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
 --- !u!4 &1749837540 stripped

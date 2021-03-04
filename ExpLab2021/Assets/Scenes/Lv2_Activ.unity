@@ -396,7 +396,7 @@ PrefabInstance:
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yin
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1424522458}
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yang
       value: 
@@ -5464,6 +5464,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3694503292499187649, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
   m_PrefabInstance: {fileID: 1424522456}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1424522458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3694503292499187654, guid: 533817bbdddc8c14f88d62a618d9e5c6, type: 3}
+  m_PrefabInstance: {fileID: 1424522456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1529923879
 GameObject:
   m_ObjectHideFlags: 0
@@ -5493,12 +5498,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef21421aa7f173b4cb66293c819e88c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Yin: {fileID: 0}
-  Yang: {fileID: 0}
+  Yin: {fileID: 1424522458}
+  Yang: {fileID: 1777157141}
   DeathSound: {fileID: 1051771509}
-  VoidTrigger: 0
-  PlatformTrigger: 0
-  FloorTrigger: 0
+  countdown: 0
+  stopwatch: 0
   Hallway: 0
 --- !u!4 &1529923882
 Transform:
@@ -6855,6 +6859,11 @@ PrefabInstance:
 --- !u!4 &1777157140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4322323956078155798, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
+  m_PrefabInstance: {fileID: 1777157139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1777157141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4322323956078156777, guid: 7ec9291510b357a4dba07beee023cc2d, type: 3}
   m_PrefabInstance: {fileID: 1777157139}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1973075066

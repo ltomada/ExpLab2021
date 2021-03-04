@@ -1722,11 +1722,11 @@ PrefabInstance:
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yin
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 671150692}
     - target: {fileID: 5477315799956605423, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
       propertyPath: Yang
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 223767773}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a379767aa157df4a99528a83ed08167, type: 3}
 --- !u!4 &1004413260 stripped
@@ -5072,8 +5072,6 @@ MonoBehaviour:
   Platform: 0
   Floor: 1
   Hallway: 0
-  countdown: 3
-  stopwatch: 0
 --- !u!19719996 &1416554100
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -5475,8 +5473,6 @@ MonoBehaviour:
   Platform: 0
   Floor: 0
   Hallway: 0
-  countdown: 3
-  stopwatch: 0
 --- !u!19719996 &1788925413
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -6971,6 +6967,8 @@ MonoBehaviour:
   Yin: {fileID: 671150692}
   Yang: {fileID: 223767773}
   DeathSound: {fileID: 2102292883}
+  countdown: 0
+  stopwatch: 0
   Hallway: 0
 --- !u!4 &1811109150
 Transform:
@@ -8720,8 +8718,6 @@ MonoBehaviour:
   Platform: 0
   Floor: 1
   Hallway: 0
-  countdown: 3
-  stopwatch: 0
 --- !u!19719996 &1973075071
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -9198,8 +9194,6 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
-  countdown: 3
-  stopwatch: 0
 --- !u!4 &2545323211226596367
 Transform:
   m_ObjectHideFlags: 0
@@ -9402,8 +9396,6 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
-  countdown: 3
-  stopwatch: 0
 --- !u!4 &2545323211264710290
 Transform:
   m_ObjectHideFlags: 0
@@ -9520,8 +9512,6 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
-  countdown: 3
-  stopwatch: 0
 --- !u!4 &4571806684840210523
 Transform:
   m_ObjectHideFlags: 0
@@ -9566,8 +9556,6 @@ MonoBehaviour:
   Platform: 1
   Floor: 0
   Hallway: 0
-  countdown: 3
-  stopwatch: 0
 --- !u!212 &4571806685361385978
 SpriteRenderer:
   m_ObjectHideFlags: 0
