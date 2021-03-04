@@ -51,6 +51,48 @@ public class LevelLoader : MonoBehaviour
          LoadNextLevel(SceneToLoad);
          transition.SetBool("Fade", true);
       }
+
+      if(Input.GetKeyDown(KeyCode.Alpha0))
+      {
+         LoadNextLevel(0);
+         transition.SetBool("Fade", true);
+      }
+
+      if(Input.GetKeyDown(KeyCode.Alpha1))
+      {
+         LoadNextLevel(1);
+         transition.SetBool("Fade", true);
+      }
+
+      if(Input.GetKeyDown(KeyCode.Alpha2))
+      {
+         LoadNextLevel(2);
+         transition.SetBool("Fade", true);
+      }
+
+      if(Input.GetKeyDown(KeyCode.Alpha3))
+      {
+         LoadNextLevel(3);
+         transition.SetBool("Fade", true);
+      }
+
+      if(Input.GetKeyDown(KeyCode.Alpha4))
+      {
+         LoadNextLevel(4);
+         transition.SetBool("Fade", true);
+      }
+
+      if(Input.GetKeyDown(KeyCode.Alpha5))
+      {
+         LoadNextLevel(5);
+         transition.SetBool("Fade", true);
+      }
+
+      if(Input.GetKeyDown(KeyCode.Alpha6))
+      {
+         LoadNextLevel(6);
+         transition.SetBool("Fade", true);
+      }
     }  
 
     public void LoadNextLevel(int SceneToLoad)

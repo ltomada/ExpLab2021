@@ -9293,7 +9293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 0
-  RotateSpeed: 1
+  RotateSpeed: -1
 --- !u!1 &2545323211264710284
 GameObject:
   m_ObjectHideFlags: 0
@@ -9379,7 +9379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 0
-  RotateSpeed: 1
+  RotateSpeed: -1
 --- !u!114 &2545323211264710289
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class DeathController : MonoBehaviour
     {
         Yin = GameObject.FindGameObjectWithTag("Yin");
         Yang = GameObject.FindGameObjectWithTag("Yang");
-        countdown = 0.25f;
+        countdown = 0.1f;
         stopwatch = 0;
     }
 
